@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    	<meta charset="utf-8">
+    	<meta name="description" content="Everyones favorite card game">
+    	<meta name="keywords" content="one, two, three">
+
+		<title>Blackjack</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<h2>Let's play some blackjack! Try to reach 21. House stays on 17</h2>
+		<h1></h1>
+		<section class="buttons clearfix">
+			<button class="draw-card">Click to draw a hand</button>
+			<div class="hidden">
+				<button class="hit">Click to hit</button>
+				<button class="stay">Click to stay</button>
+			</div>
+			<button class="shuffle">Click to shuffle decks</button>
+		</section>
+		
+		<section class="pcards clearfix">
+			
+		</section>
+		
+		<h4 class="playerPoints">Your point total: <p class="playerPointCount"></p></h4>
+
+		<h3>House hand</h3>
+		<div class="hcards clearfix">
+			
+		</div>
+		
+		<h4 class="housePoints">House point total: <p class="housePointCount"></p></h4>
+		
+
+		<script type="text/javascript" src="js/main.js"></script>
+	</body>
+</html>

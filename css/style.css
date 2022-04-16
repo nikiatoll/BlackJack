@@ -1,0 +1,42 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+button{
+  float: left;
+  width: 10%;
+  margin: 1%;
+}
+@media screen and (max-width: 750px) {
+  button{
+    height: 30%;
+    width: 15%;
+  }
+}
+.hidden{
+  display: none;
+}
+img{
+  float: left;
+  max-height: 20vh;
+}
+p{
+  display: inline;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
