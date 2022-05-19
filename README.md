@@ -4,7 +4,6 @@ A web app to simulate a game of blackjack
 This project allows you to play blackjack against the computer. Simulates using a real deck by drawing cards and allowing you to shuffle.
 Link to project: https://blackjaaack.netlify.app/
 
-alt tag
 How It's Made:
 
 Tech used: HTML, CSS, JavaScript
