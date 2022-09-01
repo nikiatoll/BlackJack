@@ -7,6 +7,9 @@ let houseHand = []
 window.onload = function() {
     getDeck();
 }
+// seperate into mvc, the mode stores hands and totals in the db
+//Use that to compare trends in cards drawn with expectations.
+//See how random each game really is.  
 document.querySelector(".draw-card").addEventListener('click', drawHand)
 document.querySelector(".hit").addEventListener('click', hitPlayer)
 document.querySelector(".stay").addEventListener('click', startHouseTurn)
@@ -32,14 +35,15 @@ function drawHand(){
         .then(data => {
             clearHands()
             addInitToHands(data)
-            console.log(data)
             showInitDraw()
             showPlayerPoints()
+            document.querySelector('.stay').style.display = 'inline'
+            document.querySelector('.hit').style.display = 'inline'
         })
         .catch(err => {
             console.log(`error${err}`)
         });
-        document.querySelector('.hidden').style.display = 'inline'
+        
 }
 
 function showInitDraw(){
@@ -133,6 +137,7 @@ function startHouseTurn(){
     announceWinner()
 }
 
+
 function countHousePoints(){
     housePoints = 0
     for (let i = 0; i < houseHand.length; i++) {
@@ -166,7 +171,8 @@ function clearAll(){
     clearHands()
     clearScore()
     document.querySelector('h1').innerText = ''
-    document.querySelector('.hidden').style.display = 'none'
+    document.querySelector('.stay').style.display = 'none'
+    document.querySelector('.hit').style.display = 'none'
 }
 
 function reshuffleDeck(){
@@ -179,6 +185,7 @@ function reshuffleDeck(){
             console.log(`error${err}`)
         })
         clearAll()
+        document.querySelector('.shuffle').style.display = 'none'
 }
 
 function addInitToHands(data){
@@ -212,5 +219,8 @@ function announceWinner(){
         
         document.querySelector('h1').innerText ='Its a tie!'
     }
-    document.querySelector('.hidden').style.display = 'none'
+    document.querySelector('.stay').style.display = 'none'
+    document.querySelector('.hit').style.display = 'none'
+    document.querySelector('.shuffle').style.display = 'inline'
 }
+
