@@ -37,13 +37,12 @@ function drawHand(){
             addInitToHands(data)
             showInitDraw()
             showPlayerPoints()
-            document.querySelector('.stay').style.display = 'inline'
-            document.querySelector('.hit').style.display = 'inline'
         })
         .catch(err => {
             console.log(`error${err}`)
         });
-        
+        document.querySelector('.stay').style.display = 'inline'
+            document.querySelector('.hit').style.display = 'inline'
 }
 
 function showInitDraw(){
