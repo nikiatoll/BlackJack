@@ -10,10 +10,13 @@
 /******************************************
 /* LAYOUT
 /*******************************************/
-
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
 button{
-  float: left;
-  width: 10%;
+  width: 8%;
   margin: 1%;
 }
 @media screen and (max-width: 750px) {
@@ -22,11 +25,13 @@ button{
     width: 15%;
   }
 }
+.hit, .stay{
+  align-content: center;
+}
 .hidden{
   display: none;
 }
 img{
-  float: left;
   max-height: 20vh;
 }
 p{
@@ -40,3 +45,13 @@ p{
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
+button{
+  background-color: darksalmon;
+  border-radius: 10px;
+}
+body{
+  background-color: rgb(34, 97, 21);
+  color: white;
+  font-family: 'Noto Sans', sans-serif;
+}
